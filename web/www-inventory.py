@@ -4,7 +4,7 @@
 #
 # Clay Wells <cwells@cwells.org>
 #
-# Find all web servers servers on a subnet.
+# Find all web servers on a subnet.
 #
 ###############################################################################
 # This program is free software: you can redistribute it and/or modify it     #
