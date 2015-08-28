@@ -29,7 +29,7 @@ Find all web servers on a subnet.
 
 Edit the script and set the following variables
 
-  subnet = '192.168.1.0/24'
-  ports = '80,443'
+  - subnet = '192.168.1.0/24'
+  - ports = '80,443'
 
 
