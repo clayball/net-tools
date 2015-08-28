@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #
-# www-inventory.pl (Python3)
+# www-inventory.py (Python3)
 #
 # Clay Wells <cwells@cwells.org>
 #
@@ -73,6 +73,7 @@ nm.scan(hosts=subnet, arguments='-p%s --scan-delay 1' % ports)
 
 print('[+] ======================================================================')
 for host in nm.all_hosts():
+  # TODO we are currently only displaying results with port 443
 	if nm[host]['tcp'][443]['state'] == 'open':
 		print('[+] %s has hostname %s | port 443=%s' % (host,nm[host].hostname(),nm[host]['tcp'][443]['state']))
 print('==========================================================================')
