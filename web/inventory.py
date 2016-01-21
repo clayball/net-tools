@@ -2,7 +2,7 @@
 #
 # www-inventory.py (Python3)
 #
-# Clay Wells <cwells@cwells.org>
+# Clay Wells
 #
 # Find all web servers on a subnet.
 #
@@ -55,7 +55,7 @@ subnet = '192.168.1.0/24'
 ports = '80,443'
 
 print('==========================================================================')
-print('[+] HTTPS Inventory')
+print('[+] Port 80,443 Inventory')
 print('[+]')
 print('[+] scanning for port 443 on subnet %s' % subnet )
 print('[+]  ..this could take a minute.. please wait..')
@@ -77,4 +77,4 @@ for host in nm.all_hosts():
 	if nm[host]['tcp'][443]['state'] == 'open':
 		print('[+] %s has hostname %s | port 443=%s' % (host,nm[host].hostname(),nm[host]['tcp'][443]['state']))
 print('==========================================================================')
-# EOF
+
