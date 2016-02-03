@@ -1,7 +1,9 @@
 net-tools
 =========
 
-This is a repo for the small scripts I find useful.
+This is a repo for the small scripts I find useful. Some of the shell script I plan on adding could
+be BASH aliases instead. I hope to add to these and make them more useful and perhaps be used to
+create output to be used as input for other scripts/tools.
 
 TLS
 ---
