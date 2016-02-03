@@ -51,7 +51,7 @@ import os
 import nmap
 
 # Set the subnet you'd like to scan.
-subnet = '192.168.1.0/24'
+subnet = '128.91.234.0/24'
 ports = '80,443'
 
 print('==========================================================================')
@@ -71,10 +71,10 @@ except:
 #nm.scan(subnet, '443')
 nm.scan(hosts=subnet, arguments='-p%s --scan-delay 1' % ports)
 
-print('[+] ======================================================================')
+print('==========================================================================')
 for host in nm.all_hosts():
   # TODO we are currently only displaying results with port 443
 	if nm[host]['tcp'][443]['state'] == 'open':
-		print('[+] %s has hostname %s | port 443=%s' % (host,nm[host].hostname(),nm[host]['tcp'][443]['state']))
+		print('%s, %s, 443=%s' % (host,nm[host].hostname(),nm[host]['tcp'][443]['state']))
 print('==========================================================================')
 
