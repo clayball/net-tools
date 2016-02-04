@@ -59,7 +59,7 @@ import nmap
 
 # Set the subnet you'd like to scan.
 subnet = '128.91.234.0/24'
-ports = '80,443'
+ports = '443'
 
 print('==========================================================================')
 print('[+] Port 443 Inventory')
