@@ -32,3 +32,7 @@ Edit the script and set the following variables
   - subnet = '192.168.1.0/24'
 
 
+## Scripts ##
+
+A collection of scripts that may use the output from the web or packet scripts as input.
+
