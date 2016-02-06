@@ -1,1 +1,4 @@
 */*.csv
+reports/*.out
+scripts/*.out
+*.out

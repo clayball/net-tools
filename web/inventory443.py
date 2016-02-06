@@ -58,7 +58,7 @@ import os
 import nmap
 
 # Set the subnet you'd like to scan.
-subnet = '128.91.234.0/24'
+subnet = '192.168.1.0/24'
 ports = '443'
 
 print('==========================================================================')
