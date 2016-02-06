@@ -17,10 +17,6 @@ syn-packet.py is based on a classic SYN scan. A single SYN packet is sent
 to a single/multiple hosts and single/multiple ports and will quit after
 receving a single response.
 
-### ntpd-check.py ###
-
-TODO add this script.
-
 
 ## Web ##
 
