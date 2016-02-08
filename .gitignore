@@ -2,3 +2,5 @@
 reports/*.out
 scripts/*.out
 *.out
+*.xml
+web/*.xml
