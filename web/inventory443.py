@@ -4,7 +4,8 @@
 #
 # Clay Wells
 #
-# Find all web servers on a subnet.
+# Find all web servers on a subnet. Output as hostname:443 so we can use the
+# resulting ouput as input for sslyze.
 #
 ###############################################################################
 # This program is free software: you can redistribute it and/or modify it     #
@@ -24,8 +25,14 @@
 # Change Log
 # ==========
 #
+# 2016-02-04
+# 
+# - Formatting output so that it can be used as input for sslyze.
+# - The output can be copy/pasted into a file.
+# - Still need to send output to a file.
 #
-# Future Improvements
+#
+# Future Enhancements
 # ===================
 # 
 # - get subnets to search from user input or config file (use variable for now)
@@ -52,10 +59,10 @@ import nmap
 
 # Set the subnet you'd like to scan.
 subnet = '192.168.1.0/24'
-ports = '80,443'
+ports = '443'
 
 print('==========================================================================')
-print('[+] Port 80,443 Inventory')
+print('[+] Port 443 Inventory')
 print('[+]')
 print('[+] scanning for port 443 on subnet %s' % subnet )
 print('[+]  ..this could take a minute.. please wait..')
@@ -71,10 +78,10 @@ except:
 #nm.scan(subnet, '443')
 nm.scan(hosts=subnet, arguments='-p%s --scan-delay 1' % ports)
 
-print('[+] ======================================================================')
+print('==========================================================================')
 for host in nm.all_hosts():
   # TODO we are currently only displaying results with port 443
 	if nm[host]['tcp'][443]['state'] == 'open':
-		print('[+] %s has hostname %s | port 443=%s' % (host,nm[host].hostname(),nm[host]['tcp'][443]['state']))
+		print('%s:443' % (nm[host].hostname()))
 print('==========================================================================')
 
