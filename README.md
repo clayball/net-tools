@@ -25,6 +25,10 @@ Web related scripts live here.
 
 ### inventory443.py
 
+20160208: For some reason this script has decided to stop working. After spending time
+  trying to figure out the issue I've decided to port this to Ruby. I will leave the
+  Python script here for the moment.
+
 Find all HTTPS servers on a subnet. This scans a subnet for hosts with port 443 open.
 
 Edit the script and set the following variables
