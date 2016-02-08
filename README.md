@@ -23,7 +23,7 @@ receving a single response.
 Web related scripts live here.
 
 
-### inventory443.py
+### inventory443.py, inventory443.rb
 
 20160208: For some reason this script has decided to stop working. After spending time
   trying to figure out the issue I've decided to port this to Ruby. I will leave the
