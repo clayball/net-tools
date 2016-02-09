@@ -1,6 +1,6 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 #
-# inventory.py (python 2.7)
+# inventory443.py (Python3)
 #
 # Clay Wells
 #
@@ -61,27 +61,27 @@ import nmap
 subnet = '192.168.1.0/24'
 ports = '443'
 
-print '=========================================================================='
-print '[+] Port 443 Inventory'
-print '[+]'
-print '[+] scanning for port 443 on subnet %s' % subnet 
-print '[+]  ..this could take a minute.. please wait..'
+print('==========================================================================')
+print('[+] Port 443 Inventory')
+print('[+]')
+print('[+] scanning for port 443 on subnet %s' % subnet )
+print('[+]  ..this could take a minute.. please wait..')
 try:
 	nm = nmap.PortScanner()
 except nmap.PortScannerError:
-	print '[-] Nmap not found', sys.exc_info()[0]
+	print('[-] Nmap not found', sys.exc_info()[0])
 	sys.exit(1)
 except:
-	print '[-] Unexpected error:', sys.exc_info()[0]
+	print("[-] Unexpected error:", sys.exc_info()[0])
 	sys.exit(1)
 
 #nm.scan(subnet, '443')
 nm.scan(hosts=subnet, arguments='-p%s --scan-delay 1' % ports)
 
-print '=========================================================================='
+print('==========================================================================')
 for host in nm.all_hosts():
   # TODO we are currently only displaying results with port 443
 	if nm[host]['tcp'][443]['state'] == 'open':
 		print('%s:443' % (nm[host].hostname()))
-print '=========================================================================='
+print('==========================================================================')
 
