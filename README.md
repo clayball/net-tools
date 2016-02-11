@@ -38,7 +38,6 @@ For some reason this script has decided to stop working. After spending time try
 figure out the issue I've decided to port this to Ruby. I will leave the Python script
 here for the moment.
 
-----
 
 Find all HTTPS servers on a subnet. This scans a subnet for hosts with port 443 open.
 
