@@ -1,6 +1,8 @@
 */*.csv
-reports/*.out
+results/*.*
 scripts/*.out
 *.out
 *.xml
 web/*.xml
+.idea/*
+
