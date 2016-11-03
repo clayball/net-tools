@@ -7,7 +7,7 @@ import os
 # We could get this value in different ways.
 # - query for the current ip and netmask of an interface
 # - pass the value as an argument to the script
-cidr = '192.168.210.0/21'
+cidr = '165.123.154.0/23'
 
 subnet = IPNetwork(str(cidr))
 
@@ -21,7 +21,7 @@ print '[*] size: %s' % subnet.size
 ip_list = list(subnet)
 
 try:
-	fs = open('results/' + str(subnet.ip) + '-hosts.txt', 'w')
+	fs = open('../results/' + str(subnet.ip) + '-hosts.txt', 'w')
 except IOError:
 	print '[-] ERROR: could not open file for writing'
 
@@ -36,5 +36,5 @@ for ip in ip_list:
 
 fs.close()
 
-print '[*] hosts written to results/' + str(subnet.ip) + '-hosts.txt'
+print '[*] hosts written to ../results/' + str(subnet.ip) + '-hosts.txt'
 
