@@ -1,9 +1,9 @@
 net-tools
 =========
 
-This is a repo for the small scripts I find useful. Some of the shell script I plan on adding could
-be BASH aliases instead. I hope to add to these and make them more useful and perhaps be used to
-create output to be used as input for other scripts/tools.
+This is a repo for the small scripts I find useful. Some of the shell scripts I plan on adding could
+actually be BASH aliases. I hope to add to these and make them more useful and perhaps be used to
+create output that could be used as input for other scripts/tools.
 
 
 ## Packet ##
@@ -25,9 +25,19 @@ Web related scripts live here.
 
 ### inventory443.py, inventory443.rb
 
-20160208: For some reason this script has decided to stop working. After spending time
-  trying to figure out the issue I've decided to port this to Ruby. I will leave the
-  Python script here for the moment.
+Updates
+
+- move these updates to an issue queue.
+
+20160209:
+I reverted inventory443.py to a previous (working) version. This version uses python3.
+Maintenance of this script will be minimal.
+
+20160208:
+For some reason this script has decided to stop working. After spending time trying to
+figure out the issue I've decided to port this to Ruby. I will leave the Python script
+here for the moment.
+
 
 Find all HTTPS servers on a subnet. This scans a subnet for hosts with port 443 open.
 
