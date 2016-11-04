@@ -5,4 +5,4 @@ scripts/*.out
 *.xml
 web/*.xml
 .idea/*
-
+*.csv
