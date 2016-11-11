@@ -3,42 +3,39 @@
 #
 # Clay Wells
 # 
-# syn-packet.py is based on a classic SYN scan. A single SYN packet is sent
-# to a single/multiple hosts and single/multiple ports and will quit after
-# receving a single response.
+# A single SYN packet is sent to single/multiple hosts and single/multiple
+# ports and will quit after receving a single response.
 #
 # MUST BE RUN USING SUDO --OR-- AS ROOT 
 #
-###############################################################################
-# This program is free software: you can redistribute it and/or modify it     #
-# under the terms of the GNU General Public License as published by the Free  #
-# Software Foundation, either version 3 of the License, or (at your option)   #
-# any later version.                                                          #
-#                                                                             #
-# This program is distributed in the hope that it will be useful, but WITHOUT #
-# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or       #
-# FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for    #
-# more details.                                                               # 
-#                                                                             #
-# You should have received a copy of the GNU General Public License along     #
-# with this program. If not, see <http://www.gnu.org/licenses/>.              #
+# Updates:
+# 
+# The results are not interesting at all. Will fix soon.
+#
+# 20161111, Clay
+# - get a single IP target from command-line (start with a single IP address)
+# 
+#
 ###############################################################################
 
 # require scapy
 from scapy.all import *
+import sys
 
-print '==============================================================================='
-print '[+] SYN-Packet'
-print '[+]'
+print '[*]'
+print '[*] SYN-Packet'
+print '[*]'
 
 # hosts to include in scan
-hosts = ["204.79.197.200","173.194.43.96"]
+#hosts = ["204.79.197.200","173.194.43.96"]
+target = sys.argv[1]
+print '[*] Target: ', target 
 
 # set the ports to send a SYN packet (should makes sense to send it)
 #ports = '22,80,443'
 
-# send to single/multiple hosts/ports
-res,nores = sr(IP(dst=hosts)/TCP(sport=RandShort(),dport=[80],flags="SA"))
+# Build and send to port(s) of target
+res,nores = sr(IP(dst=target)/TCP(sport=RandShort(),dport=[80],flags="SA"))
 
 # =============================================================================
 # Results can be displayed in different ways.
