@@ -6,3 +6,5 @@ scripts/*.out
 web/*.xml
 .idea/*
 *.csv
+*.txt
+*/*.txt
